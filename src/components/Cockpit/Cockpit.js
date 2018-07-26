@@ -3,6 +3,7 @@ import classes from './Cockpit.css';
 import Aux from '../../hoc/Aux';
 
 const Cockpit = (props) => {
+    console.log(props);
     let style = {
         backgroundColor:'green',
         color:'white',
@@ -26,6 +27,7 @@ const Cockpit = (props) => {
 
     return(
         <Aux>
+            {props.children}
             <p>Hi There</p>
             <p className={assignedClasses.join(' ')}>This is really working</p>
             <button style={style} onClick={props.togglePersons}>Toggle Persons</button>
